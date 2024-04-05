@@ -10,7 +10,6 @@ class ball : public sf::Drawable, public sf::Transformable
         float Speed;
         sf::VertexArray Vertices;
     public:
-        int id;
 
         float X_Speed;
         float Y_Speed;
@@ -18,7 +17,6 @@ class ball : public sf::Drawable, public sf::Transformable
         ball();
         ball(float xsize, int Difficulty, int xid, int width, int hight, sf::Color c)
         {
-            id = xid;
             Min_Speed = Difficulty * 10;
             Max_Speed = Difficulty+1 * 10 ;
             Size = xsize;
@@ -272,7 +270,6 @@ private:
     float Time_left;
     sf::Clock Timer;
     std::vector<board> Game_Board;
-    sf::Clock Bonus_Score;
 public:
     Game(int width, int height)
     {
